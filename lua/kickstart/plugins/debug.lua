@@ -28,6 +28,9 @@ return {
     local dap = require 'dap'
     local dapui = require 'dapui'
 
+    local vscode_dap = require 'dap.ext.vscode'
+    vscode_dap.load_launchjs('launch.json', { cppdbg = { 'cpp' } })
+
     require('mason-nvim-dap').setup {
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
@@ -42,6 +45,7 @@ return {
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
+        'cppdbg',
       },
     }
 
