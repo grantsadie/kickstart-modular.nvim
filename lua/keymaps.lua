@@ -49,6 +49,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_set_keymap('n', '<F4>', ':ClangdSwitchSourceHeader<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>l', ':lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 -- vim: ts=2 sts=2 sw=2 et
 
 vim.api.nvim_create_autocmd('FileType', {
