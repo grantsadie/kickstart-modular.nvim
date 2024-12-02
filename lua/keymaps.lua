@@ -61,3 +61,13 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.expandtab = true
   end,
 })
+
+vim.keymap.set('n', '<C-A-l>', ':vertical resize +2<CR>', { desc = 'Resize' })
+vim.keymap.set('n', '<C-A-h>', ':vertical resize -2<CR>', { desc = 'Resize' })
+vim.keymap.set('n', '<C-A-j>', ':resize -2<CR>', { desc = 'Resize' })
+vim.keymap.set('n', '<C-A-k>', ':resize +2<CR>', { desc = 'Resize' })
+
+vim.keymap.set('n', '<C-A-S-l>', ':vertical resize +10<CR>', { desc = 'Resize' })
+vim.keymap.set('n', '<C-A-S-h>', ':vertical resize -10<CR>', { desc = 'Resize' })
+vim.keymap.set('n', '<C-A-S-j>', ':resize -10<CR>', { desc = 'Resize' })
+vim.keymap.set('n', '<C-A-S-k>', ':resize +10<CR>', { desc = 'Resize' })
