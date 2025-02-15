@@ -157,10 +157,14 @@ return {
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
+        -- slint_lsp = {},
+        slint_lsp = { filetypes = { 'slint' } },
         -- gopls = {},
         pyright = {},
         bashls = {},
-        -- rust_analyzer = {},
+        black = {},
+
+        rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -202,6 +206,7 @@ return {
         'clangd',
         'bashls',
         'bash-language-server',
+        'slint_lsp',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
